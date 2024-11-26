@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from GolfPlayer import views
+from drinks import views
 
 urlpatterns = [
     #This empty path is added to just redirect to the base level json data
     path('', views.redirect_view),
     
     path('admin/', admin.site.urls),
-    path('golfPlayers/', views.drink_list),
-    path('golfPlayers/<int:id>', views.drink_detail)
+    path('golfPlayers/', views.golfPlayer_list),
+    path('golfPlayers/<int:id>', views.golfPlayer_detail)
 ]
